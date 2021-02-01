@@ -4,7 +4,7 @@ public class Start {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program ");
-
+// Taking Line Coordinates
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the cordinates of 1st point");
@@ -26,17 +26,20 @@ public class Start {
 		int cal2 = (int) Math.pow((y2-y1), 2);
 		int cal3 = (int) Math.pow((x4-x3), 2);
 		int cal4 = (int) Math.pow((y4-y3), 2);
-
+// caliculated the line lengths
 
                 double Length1 =  Math.sqrt(cal1+cal2);
 		double Length2 =  Math.sqrt(cal3+cal4);
 		System.out.println("Length of Line1 and Line2 is "+ Length1 +" & "+ Length2);
+// Comparision of Two lines
+		int value = Double.compare(Length1, Length2);
+		if (value == 0)
+			System.out.println("Lines are equal");
+		else if (value == 1)
+			System.out.println("Line 1 is greater than Line 2");
+		else
+			System.out.println("Line 1 is less than Line 2");
 
-		String L1 = Double.toString(Length1);
-		String L2 = Double.toString(Length2);
-
-
-		System.out.println(L1.equals(L2));
 
 	}
 }
